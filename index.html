@@ -5,11 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> To-Do List </title>
-   
+    <style>
+        .todocontainer {
+            margin: 50px auto;
+        }
+        .heading{
+          text-align: center;
+          margin-top: 50px;
+        }
+        .todolists {
+          margin: 50px auto;
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            margin: 10px auto;
+            border-radius: 20px;
+            font-size: 20px;
+            overflow-y: scroll;
+            box-shadow: 0 0 20px 1px #6c6b6b;
+        }
+
+        .btn {
+            cursor: pointer;
+            border: none;
+            padding: 2px;
+        }
+
+        #items {
+            margin-right: 10px;
+            border-radius: 20px;
+            width: 400px;
+            padding: 5px 10px;
+            font-size: 20px;
+            border: none;
+            border: 5px solid tomato;
+        }
+
+        .input {
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .inrement-img {
+            height: 35px;
+        }
+
+        .todo {
+            margin: 20px 10px;
+            background-color: cyan;
+            border-radius: 20px;
+            padding: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .todolists {
+                width: 80%;
+            }
+
+            #items {
+                width: 50%;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
+    <h1 class="heading">TO-Do Application</h1>
     <div class="todolists" id="lists-container">
 
 
@@ -19,7 +86,7 @@
         <input type="text" id="items" placeholder="Enter Task">
 
         <button class="btn" onclick="add()">
-            <img src="./plus.png" class="inrement-img" alt="plus">
+            <img src="./img/plus.png" class="inrement-img" alt="image not found">
         </button>
     </div>
     <script>
